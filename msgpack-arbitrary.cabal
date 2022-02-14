@@ -32,10 +32,10 @@ library
   exposed-modules:
       Data.MessagePack.Arbitrary
   build-depends:
-      base < 5
+      base                      < 5
     , QuickCheck
     , bytestring
-    , msgpack-types
+    , msgpack-types             >= 0.3 && < 0.4
     , text
     , vector
 
