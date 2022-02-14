@@ -1,0 +1,35 @@
+load("@ai_formation_hazel//tools:mangling.bzl", "hazel_library")
+load("@rules_haskell//haskell:defs.bzl", "haskell_library")
+load("//third_party/haskell/hspec-discover:build_defs.bzl", "hspec_test")
+load("//tools/project:build_defs.bzl", "project")
+
+project(license = "hs-msgpack")
+
+haskell_library(
+    name = "hs-msgpack-arbitrary",
+    srcs = glob(["src/**/*.*hs"]),
+    src_strip_prefix = "src",
+    version = "0.1.0",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//hs-msgpack-types",
+        hazel_library("QuickCheck"),
+        hazel_library("base"),
+        hazel_library("bytestring"),
+        hazel_library("text"),
+        hazel_library("vector"),
+    ],
+)
+
+hspec_test(
+    name = "testsuite",
+    size = "small",
+    compiler_flags = ["-Wno-unused-imports"],
+    deps = [
+        ":hs-msgpack-arbitrary",
+        "//hs-msgpack-types",
+        hazel_library("QuickCheck"),
+        hazel_library("base"),
+        hazel_library("hspec"),
+    ],
+)

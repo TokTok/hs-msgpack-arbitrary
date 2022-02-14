@@ -1,0 +1,18 @@
+---
+_extends: .github
+
+repository:
+  name: hs-msgpack-arbitrary
+  description: Arbitrary instance for Data.MessagePack.Types.Object.
+  topics: msgpack, haskell
+  has_issues: true
+
+branches:
+  - name: "master"
+    protection:
+      required_status_checks:
+        contexts:
+          - "bazel-opt"
+          - "build / stack"
+          - "checks / check-release"
+          - "common / buildifier"
