@@ -1,5 +1,5 @@
 name:                 msgpack-arbitrary
-version:              0.1.0
+version:              0.1.1
 synopsis:             A Haskell implementation of MessagePack.
 homepage:             http://msgpack.org/
 license:              BSD3
@@ -31,13 +31,16 @@ library
       -fno-warn-unused-imports
   exposed-modules:
       Data.MessagePack.Arbitrary
+      Test.MessagePack.Generate
+      Test.QuickCheck.Instances.MessagePack
   build-depends:
       base                      < 5
     , QuickCheck
     , bytestring
     , msgpack-types             >= 0.3 && < 0.4
+    , quickcheck-instances
     , text
-    , vector
+    , time
 
 test-suite testsuite
   type: exitcode-stdio-1.0
