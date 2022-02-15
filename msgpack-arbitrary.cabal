@@ -1,5 +1,5 @@
 name:                 msgpack-arbitrary
-version:              0.1.1
+version:              0.1.2
 synopsis:             A Haskell implementation of MessagePack.
 homepage:             http://msgpack.org/
 license:              BSD3
@@ -32,6 +32,7 @@ library
   exposed-modules:
       Data.MessagePack.Arbitrary
       Test.MessagePack.Generate
+      Test.MessagePack.Parser
       Test.QuickCheck.Instances.MessagePack
   build-depends:
       base                      < 5
