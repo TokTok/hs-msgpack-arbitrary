@@ -4,7 +4,7 @@
 module Test.QuickCheck.Instances.MessagePack () where
 
 import qualified Data.ByteString                      as S
-import           Data.MessagePack.Types               (Object (..))
+import           Data.MessagePack.Types               (Assoc (..), Object (..))
 import qualified Data.Text                            as T
 import           Test.QuickCheck.Arbitrary            (Arbitrary, arbitrary)
 import qualified Test.QuickCheck.Gen                  as Gen
@@ -27,3 +27,7 @@ instance Arbitrary Object where
         , ObjectExt    <$> arbitrary <*> arbitrary
         ]
         where negatives = Gen.choose (minBound, -1)
+
+
+instance Arbitrary a => Arbitrary (Assoc a) where
+    arbitrary = Assoc <$> arbitrary
