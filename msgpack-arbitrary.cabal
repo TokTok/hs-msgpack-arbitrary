@@ -28,7 +28,7 @@ library
       src
   ghc-options:
       -Wall
-      -fno-warn-unused-imports
+      -Wno-unused-imports
   exposed-modules:
       Data.MessagePack.Arbitrary
       Test.MessagePack.Generate
@@ -52,7 +52,7 @@ test-suite testsuite
       Data.MessagePack.ArbitrarySpec
   ghc-options:
       -Wall
-      -fno-warn-unused-imports
+      -Wno-unused-imports
   build-tool-depends:
       hspec-discover:hspec-discover
   build-depends:
