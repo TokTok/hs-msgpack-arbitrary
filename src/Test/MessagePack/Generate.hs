@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -Wno-incomplete-uni-patterns #-}
 module Test.MessagePack.Generate (generate) where
 
 import           Control.Monad                    (when)
