@@ -1,6 +1,5 @@
-{-# OPTIONS_GHC -fno-warn-orphans #-}
-{-# LANGUAGE StrictData  #-}
-{-# LANGUAGE Trustworthy #-}
+{-# OPTIONS_GHC -Wno-orphans #-}
+{-# LANGUAGE StrictData #-}
 module Test.QuickCheck.Instances.MessagePack () where
 
 import qualified Data.ByteString                      as S

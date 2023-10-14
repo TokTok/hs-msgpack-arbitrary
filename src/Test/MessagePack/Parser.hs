@@ -1,4 +1,3 @@
-{-# LANGUAGE Safe #-}
 -- | A MessagePack parser.
 --
 -- Example usage:
