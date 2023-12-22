@@ -5,7 +5,7 @@ module Data.MessagePack.ArbitrarySpec where
 import           Data.MessagePack.Arbitrary ()
 import           Data.MessagePack.Types     (Object (..))
 import           Test.Hspec                 (Spec, describe, it, shouldBe)
-import           Test.QuickCheck            (Arbitrary (..), property)
+import           Test.QuickCheck            (property)
 
 spec :: Spec
 spec =
